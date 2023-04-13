@@ -14,8 +14,8 @@ The code for **LayoutBench**, a new diagnostic benchmark for layout-guided image
 
 [[Project Page](https://layoutbench.github.io/)]
 [[Paper](https://layoutbench.github.io/)]
-[[Demo](https://layoutbench.github.io/)]
 
+<hr>
 
 Dataset / Evaluation details coming soon.
 
