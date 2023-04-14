@@ -13,7 +13,7 @@ The code for **LayoutBench**, a new diagnostic benchmark for layout-guided image
 [Mohit Bansal](https://www.cs.unc.edu/~mbansal/)
 
 [[Project Page](https://layoutbench.github.io/)]
-[[Paper](https://layoutbench.github.io/)]
+[[Paper](https://arxiv.org/abs/2304.06671)]
 
 <hr>
 
