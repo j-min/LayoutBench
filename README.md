@@ -15,7 +15,10 @@ The code for **LayoutBench**, a new diagnostic benchmark for layout-guided image
 [[Project Page](https://layoutbench.github.io/)]
 [[Paper](https://arxiv.org/abs/2304.06671)]
 
-<hr>
+
+
+<img src="./assets/task_overview.png" width=1000px>
+
 
 Dataset / Evaluation details coming soon.
 
