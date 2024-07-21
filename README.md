@@ -82,7 +82,7 @@ torchrun --nnodes=1 --nproc_per_node=$N_GPUS \
 The following are the example outputs for LayoutBench skill splits with the above command.
 They correspond to paper's Table 2 first row -- `GT (Oracle)`.
 There are minor variations in APs (<1%) due to package/hardward version differences.
-The following outputs are calculated with torch==2.0.0 on A6000 GPUs with [our offical DETR checkpoint](https://huggingface.co/j-min/LayoutBench-DETR/resolve/main/checkpoint.pth).
+The following outputs are calculated with torch==2.0.0 on A6000 GPUs with [our offical DETR checkpoint](https://huggingface.co/j-min/LayoutBench-DETR).
 
 ### Example output for `number_few` split
 
