@@ -335,36 +335,13 @@ def build_layoutbench_dataset(image_set, args):
     assert root.exists(), f'provided path {root} does not exist'
 
 
-    if args.dataset_file == 'layoutbench_v1':
-        skill, subsplit = args.skill_split.split('_', 1)
+    assert args.dataset_file == 'layoutbench_v1', f"args.dataset_file should be 'layoutbench_v1', but got {args.dataset_file}"
+    skill, subsplit = args.skill_split.split('_', 1)
 
-        if image_set == 'train':
-            skill_dir = Path(args.layoutbench_dir) / args.train_set / image_set / skill
-        elif image_set == 'val':
-            skill_dir = Path(args.layoutbench_dir) / args.val_set / image_set / skill
+    skill_dir = Path(args.layoutbench_dir) / image_set / skill
 
-        ann_file = skill_dir / 'coco' / f'scenes_{args.skill_split}_coco.json'
-        img_folder = skill_dir / "images"
-
-    elif args.dataset_file == 'layoutbench_v0':
-        assert args.skill_split in [
-            'number_few', 'number_many',
-            'position_boundary', 'position_center',
-            'size_tiny', 'size_verylarge',
-            'shape_horizontal', 'shape_vertical',
-            'allskills_allsplits'
-        ], f'invalid skill split {args.skill_split}'
-
-        skill, split = args.skill_split.split('_')
-
-        if image_set == 'train':
-            skill_split_dir = Path(args.layoutbench_dir) / args.train_set / skill / split 
-        elif image_set == 'val':
-            skill_split_dir = Path(args.layoutbench_dir) / args.val_set / skill / split
-
-        ann_file = skill_split_dir / f'scenes_coco.json'
-
-        img_folder = skill_split_dir / "images"
+    ann_file = skill_dir / 'coco' / f'scenes_{args.skill_split}_coco.json'
+    img_folder = skill_dir / "images"
     
     if args.eval_image_dir is not None:
         img_folder = Path(args.eval_image_dir)
@@ -372,9 +349,6 @@ def build_layoutbench_dataset(image_set, args):
         print(f'using eval image dir: {img_folder}')
         print('==============================')
 
-    # if args.layoutbench_resized_image_eval and image_set == 'val':
-    #     transform = make_coco_transforms('centercrop_test')
-    # else:
     transform = make_coco_transforms(image_set)
 
     dataset = CLEVRDataset(img_folder, ann_file,
