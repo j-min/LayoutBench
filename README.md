@@ -14,6 +14,7 @@ The evaluation code for **LayoutBench**, a new diagnostic benchmark for layout-g
 
 [[Project Page](https://layoutbench.github.io/)]
 [[Paper](https://arxiv.org/abs/2304.06671)]
+[[Dataset (HF Hub)](https://huggingface.co/datasets/j-min/layoutbench)]
 
 
 
