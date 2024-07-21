@@ -338,7 +338,7 @@ def build_layoutbench_dataset(image_set, args):
     assert args.dataset_file == 'layoutbench_v1', f"args.dataset_file should be 'layoutbench_v1', but got {args.dataset_file}"
     skill, subsplit = args.skill_split.split('_', 1)
 
-    skill_dir = Path(args.layoutbench_dir) / image_set / skill
+    skill_dir = Path(args.layoutbench_dir) / skill
 
     ann_file = skill_dir / 'coco' / f'scenes_{args.skill_split}_coco.json'
     img_folder = skill_dir / "images"
