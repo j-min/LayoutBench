@@ -17,6 +17,7 @@ The evaluation code for **LayoutBench**, a new diagnostic benchmark for layout-g
 [[Dataset (HF Hub)](https://huggingface.co/datasets/j-min/layoutbench)]
 
 
+**NEW (Jul. 2024):** Please also see [LayoutBench-COCO Github](https://github.com/j-min/LayoutBench-COCO) for LayoutBench-COCO dataset for OOD layouts with real-world objects.
 
 <img src="./assets/task_overview.png" width=1000px>
 
